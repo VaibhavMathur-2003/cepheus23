@@ -1,0 +1,85 @@
+.teaminfo{
+    width: clamp(25%, 450px , 80%);
+    height: clamp(100px, max-content , 400px);
+    display: flex;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    flex-direction: column;
+    padding: 30px 50px 50px;
+    color: black;
+    box-shadow: 0px 0px 5px grey;
+    animation: teaminfoanm 0.4s 1;
+    border-radius: 10px;
+    /* overflow: scroll; */
+}
+
+.teaminfo-visible {
+    text-align: left;
+}
+
+@keyframes teaminfoanm {
+    from {
+        height: 0px;
+        width: 0px;
+        opacity: 0;
+        overflow: hidden;
+    } to {
+        width: clamp(25%, 450px , 80%);
+        height: clamp(100px, max-content , 400px);
+        opacity: 1;
+        overflow: hidden;
+    }
+}
+
+.teaminfo .fa-xmark {
+    color: #fff;
+    text-align: left;
+    font-size: 23px;
+    cursor: pointer;
+}
+
+.teaminfo h3 {
+    text-align: left;
+    color: #fff;
+}
+
+.teaminfo h2 {
+    color: #fff;
+    text-align: center;
+}
+
+.teaminfo-hide {
+    display: none;
+}
+.teaminfo button{
+    padding: 10px 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+    transition: all 0.3s;
+    background-color: red;
+    color: #fff;
+    width: 100%;
+    margin-top: 10px;
+    font-family: 'Outfit';
+    margin-top: 20px;
+
+}
+
+.teaminfo button:hover{
+    border: none;
+    background-color: rgb(191, 35, 35);
+}
+
+.reg-loader-teaminfo {
+    margin-left: 47%;
+}
+
+.team-details {
+    color: #fff;
+    text-align: left;
+}

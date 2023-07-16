@@ -1,0 +1,1002 @@
+.schedule {
+  background-image: url(../../../public/img/CepheusBackgrounds[Recovered]_tech.jpg);
+  background-size: cover;
+  width: 100%;
+  background-position: center;
+  height: 100vh;
+  background-repeat: no-repeat;
+  position: relative;
+  scroll-snap-align: start;
+  align-items: center;
+  padding-top: 100px;
+  overflow-y: hidden;
+  overflow-x: scroll;
+}
+
+.scheduleHead {
+  color: white;
+  font-family: SpaceBoard;
+  /* position: absolute; */
+  /* width: 100%; */
+  /* text-align: center; */
+  font-size: clamp(2.5rem, 1rem + 15vh, 4.5rem);
+  font-family: 'SpaceBoards';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 350%;
+}
+/* .scheduleDates img {
+  opacity: 0.8;
+  width: 25vw;
+  position: absolute;
+}
+.feb8,
+.feb9,
+.feb10,
+.feb11,
+.feb12 {
+  position: absolute;
+  top: 0;
+  word-wrap: break-word;
+} */
+/* .feb8 {
+  left: 0;
+}
+.feb9 {
+  left: 18.5vw;
+  background-color: #00000099;
+}
+.feb10 {
+  left: 37vw;
+}
+.feb11 {
+  left: 55.5vw;
+}
+.feb12 {
+  left: 74vw;
+}
+.feb {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: cyan;
+  font-size: clamp(1rem, 0.5rem + 3vw, 1.5rem);
+  word-wrap: break-word;
+} */
+
+
+
+.polygon {
+  transition: transform .2s; /* Animation */
+  margin: 0 auto;
+  /* border: 1px solid red; */
+}
+
+/* .polygon:hover  {
+  transform: scale(2);
+  opacity: .65;
+} */
+
+/* .feb:hover:after{
+  content: attr(data-hover);
+  color: white;
+  font-size: .5rem;
+} */
+
+/* .feb {
+  width: 15vw;
+  font-size: 19px;
+}
+
+.feb::before{
+  content: attr(data-before);
+} */
+
+.polygon:hover + .feb::after {
+  content: attr(data-hover);
+  /* border: 1px solid red; */
+}
+
+
+
+/* @media screen and (max-width: 1110px) {
+
+  .feb {
+    font-size: 20px;
+  }
+
+  .feb8, .feb9, .feb10 {
+    position: absolute;
+    top: 0;
+  }
+
+  .scheduleDates {
+    margin-top: 35vh;
+  }
+
+  .scheduleDates img {
+    width: 30vw;
+  }
+
+  .feb8 {
+    left: 10vw;
+  }
+  .feb9{
+    left: 35vw;
+  }
+  .feb10 {
+    left: 60vw;
+  }
+
+  .feb11, .feb12 {
+    position: absolute;
+    top: 21vw;
+  }
+  .feb11 {
+    left: 20vw;
+  }
+  .feb12 {
+    left: 45vw;
+  }
+}
+
+@media screen and (max-width: 800px) {
+
+  .feb8 {
+    left: 9vw;
+  }
+
+  .feb10 {
+    left: 61vw;
+  }
+
+  .scheduleDates img {
+    width: 32vw;
+  }
+  .feb11, .feb12 {
+    position: absolute;
+    top: 23vw;
+  }
+
+  .feb11 {
+    left: 19.5vw;
+  }
+
+  .feb12 {
+    left:45.5vw;
+  }
+  .scheduleDates {
+    margin-top: 40vh;
+  }
+  .feb {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .feb {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .feb {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .scheduleDates img {
+    width: 38vw;
+  }
+
+  .feb8 {
+    left: 2vw;
+  }
+
+  .feb9 {
+    left: 31.5vw;
+  }
+
+  .feb11, .feb12 {
+    top: 26vw;
+  }
+
+  .feb11 {
+    left: 14vw;
+  }
+
+  .feb12 {
+    left: 44vw;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .scheduleDates {
+    margin-top: 35vh;
+  }
+
+  .scheduleDates img {
+    width: 50vw;
+  }
+
+  .feb8 {
+    left: 4vw;
+  }
+  .feb9 {
+    left: 44vw;
+  }
+  .feb10 {
+    left: 4vw;
+    top: 35vw;
+  }
+  .feb11 {
+    left: 44vw;
+    top: 35vw;
+  }
+  .feb12 {
+    left: 20vw;
+    top: 70vw;
+  }
+
+  .scheduleHead {
+    font-size: 48px;
+  }
+} */
+
+
+
+.scheduleCard {
+  min-width: 20vw;
+  height: 15vw;
+  background-color: #00000099;
+  /* align-items: center; */
+  clip-path: polygon(25% 0, 100% 0%, 75% 100%, 0% 100%);
+  position: absolute;
+  top: 40%;
+  transition: all 0.4s;
+  overflow: hidden;
+}
+
+.scheduleCard.animate {
+  clip-path: polygon(25% 0, 100% 0%, 75% 100%, 0% 100%)!important;
+}
+
+
+.scheduleCard .schedule-list {
+  position: absolute;
+  top: 400px;
+  opacity: 0;
+  transition: all 0.6s;
+  list-style: none;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+ 
+.feb8 {
+  left: 0%;
+  opacity: 0;
+}
+
+.feb8.animate {
+  left: 8%;
+  opacity: 1;
+}
+
+.feb9 {
+  left: 16%;
+  opacity: 0;
+  transition: all 0.4s, left 0.4s;
+  transition-delay: 0, 0.2s;
+}
+
+.feb9.animate {
+  left: 24%;
+  opacity: 1;
+}
+
+.feb10 {
+  left: 32%;
+  opacity:0;
+}
+
+.feb10.animate {
+  left: 40%;
+  opacity: 1;
+}
+
+.feb11 {
+  left: 48%;
+  opacity: 0;
+}
+
+.feb11.animate {
+  left: 56%;
+  opacity: 1;
+}
+
+.feb12 {
+  left: 64%;
+  opacity: 0;
+}
+
+.feb12.animate {
+  left: 72%;
+  opacity: 1;
+}
+
+/* .scheduleCard:nth-child(0){
+  left: 10%;
+} */
+/* .scheduleCard:nth-child(1){
+  left: 15%;
+}
+.scheduleCard:nth-child(2){
+  left: 25%;
+}
+.scheduleCard:nth-child(3){
+  left: 35%;
+}
+.scheduleCard:nth-child(4){
+  left: 45%;
+} */
+
+
+
+li {
+  margin-bottom: 2vh;
+}
+
+.scheduleCard:hover {
+  transform: scale(2);
+  background-color: none;
+  backdrop-filter: blur(15px);
+  border: 0.5px solid #fff;
+  /* clip-path: polygon(25% 0, 100% 0%, 75% 100%, 0% 100%); */
+  z-index: 10;
+
+}
+
+.schedule-date{ 
+  position: absolute;
+  top: 42%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.scheduleCard:hover .schedule-date{
+  transition: all 0.4s;
+  top: 0;
+  left: 60%;
+}
+
+
+.scheduleCard:hover .schedule-list {
+  width: fit-content;
+  opacity: 1;
+  font-size: 10px;
+  top: 5vh;
+  /* left: -1.5vw; */
+  text-align: left;
+}
+
+.schedule-list-item:nth-child(1){
+  margin-left: 5.5vw;
+}
+
+.schedule-list-item:nth-child(2){
+  margin-left: 4.9vw;
+}
+
+.schedule-list-item:nth-child(3){
+  margin-left: 4.3vw;
+}
+
+.schedule-list-item:nth-child(4){
+  margin-left: 3.7vw;
+}
+
+.schedule-list-item:nth-child(5){
+  margin-left: 3.1vw;
+}
+
+.temporary {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+@media screen and (max-width: 1440px) {
+  .schedule-list-item:nth-child(1){
+    margin-left: 5vw;
+  }
+  
+  .schedule-list-item:nth-child(2){
+    margin-left: 4.3vw;
+  }
+  
+  .schedule-list-item:nth-child(3){
+    margin-left: 3.6vw;
+  }
+  
+  .schedule-list-item:nth-child(4){
+    margin-left: 2.9vw;
+  }
+  
+  .schedule-list-item:nth-child(5){
+    margin-left: 2.2vw;
+  }
+}
+
+@media screen and (max-width: 1360px) {
+  .scheduleCard:hover .schedule-list {
+    font-size: 9px;
+  }
+}
+
+@media screen and (max-width: 1290px) {
+  .scheduleCard:hover .schedule-list {
+    top: 4vh;
+  }
+
+  li {
+    margin-bottom: 1.5vh;
+  }
+}
+
+@media screen and (max-width: 1176px) {
+  .scheduleCard:hover .schedule-date {
+    font-size: 13px;
+  }
+  .scheduleCard:hover .schedule-list {
+    font-size: 8px;
+  }
+}
+
+@media screen and (max-width: 1110px) {
+
+  .scheduleCard {
+    top: 35%;
+  }
+  .scheduleCard:hover .schedule-list {
+    top: 3vh;
+  }
+  li {
+    margin-bottom: 1.4vh;
+  }
+
+  .feb8 {
+    left: 15%;
+  }
+
+  .feb8.animate {
+    left: 23%;
+  }
+
+  .feb9 {
+    left: 32%;
+  }
+
+  .feb9.animate {
+    left: 40%;
+  }
+
+  .feb10 {
+    left: 49%;
+  }
+
+  .feb10.animate {
+    left: 57%;
+  }
+
+  .feb11 {
+    top: 64%;
+    left: 20.5%
+  }
+
+  .feb11.animate {
+    top: 64%;
+    left: 28.5%
+  }
+  .feb12 {
+    top: 64%;
+    left: 37.5%;
+  }
+
+  .feb12.animate {
+    top: 64%;
+    left: 45.5%;
+  }
+
+}
+
+@media screen and (max-width: 1010px) {
+  .scheduleCard:hover .schedule-date {
+    font-size: 10px;
+
+  }
+  .scheduleCard:hover .schedule-list {
+    top: 3vh;
+  }
+
+  li {
+    margin-bottom: 1.3vh;
+  }
+}
+
+@media screen and (max-width: 980px) {
+  .scheduleCard{
+    width: 21vw;
+  }
+
+  .feb11, .feb12 {
+    top: 61%;
+  }
+
+  .scheduleCard:hover .schedule-list {
+    font-size: 7px;
+    /* left: -5vw; */
+  }
+
+  li {
+    margin-bottom: 1vh;
+  }
+  
+}
+/* 
+@media screen and (max-width: 930px) {
+  .scheduleCard:hover .schedule-list {
+    font-size: 7px;
+    left: -4.5vw;
+  }
+} */
+
+@media screen and (max-width: 900px) {
+  .scheduleCard {
+    width: 22vw;
+  }
+  .feb8 {
+    left: 14%;
+  }
+  .feb10{
+    left: 50%;
+  }
+
+  .feb11 {
+    left: 20%;
+    top: 60%;
+  }
+  .feb12 {
+    left: 38%;
+    top: 60%;
+
+  }
+  .feb8.animate {
+    left: 22%;
+  }
+  .feb10.animate{
+    left: 58%;
+  }
+
+  .feb11.animate {
+    left: 28%;
+    top: 60%;
+  }
+  .feb12.animate {
+    left: 46%;
+    top: 60%;
+
+  }
+}
+
+@media screen and (max-width: 840px) {
+  .scheduleCard:hover .schedule-list {
+    top: 2vh;
+  }
+  .feb8 {
+    left:15% ; 
+  }
+  .feb10 {
+    left: 53%;
+  }
+  .feb11 {
+    left: 21.5%;
+  }
+  .feb12 {
+    left: 40.5%;
+  }
+
+  .feb8.animate {
+    left:21% ; 
+  }
+  .feb10.animate {
+    left: 59%;
+  }
+  .feb11.animate {
+    left: 27.5%;
+  }
+  .feb12.animate {
+    left: 46.5%;
+  }
+}
+
+@media screen and (max-width: 790px) {
+  .schedule-date {
+    font-size: 14px;
+  }
+
+  li {
+    /* font-size: 8px; */
+    left: 30%;
+  }
+
+  p {
+    font-size: 8px;
+  }
+  .schedule-date {
+    font-size: 13px;
+  }
+
+  li {
+    font-size: 7px;
+  }
+}
+
+@media screen and (max-width: 760px) {
+  .schedule-date {
+    font-size: 13px;
+  }
+
+  .scheduleCard {
+    width: 25vw;
+  }
+
+  .feb8 {
+    left: 13%;
+  }
+  .feb10 {
+    left: 55%;
+  }
+
+  .feb11, .feb12 {
+    top: 56%;
+  }
+
+  .feb11 {
+    left:20%;
+  }
+
+  .feb8.animate {
+    left: 19%;
+  }
+  .feb10.animate {
+    left: 61%;
+  }
+
+  .feb11.animate {
+    left:26%;
+  }
+
+  .schedule-date {
+    font-size: 13px;
+  }
+
+  li {
+    font-size: 7px;
+    margin-bottom: 0.7vh;
+  }
+
+  .schedule-list-item:nth-child(1){
+    margin-left: 6.5vw;
+  }
+  
+  .schedule-list-item:nth-child(2){
+    margin-left: 5.6vw;
+  }
+  
+  .schedule-list-item:nth-child(3){
+    margin-left: 4.7vw;
+  }
+  
+  .schedule-list-item:nth-child(4){
+    margin-left: 3.8vw;
+  }
+  
+  .schedule-list-item:nth-child(5){
+    margin-left: 3vw;
+  }
+}
+
+@media screen and (max-width:690px) {
+  .scheduleCard {
+    width: 28vw;
+    height: 18vw;
+  }
+  .feb8 {
+    left: 13%;
+  }
+  .feb10 {
+    left: 57%;
+  }
+  .feb11 {
+    left: 17%
+  }
+
+  .feb8.animate {
+    left: 17%;
+  }
+  .feb10.animate {
+    left: 63%;
+  }
+  .feb11.animate {
+    left: 23%
+  }
+
+  .feb11, .feb12 {
+    top: 58%;
+  }
+
+  .schedule-date {
+    font-size: 10px;
+  }
+
+  li {
+    font-size: 6px;
+  }
+
+  .scheduleCard:hover .schedule-list {
+    top: 3vh;
+  }
+}
+
+@media screen and (max-width: 610px) {
+  .scheduleCard {
+    height: 19vw;
+  }
+
+  .feb11, .feb12 {
+    top: 56%;
+  }
+}
+
+@media screen and (max-width: 570px) {
+  .scheduleCard:hover .schedule-list {
+    top: 2vh;
+  }  
+}
+
+@media screen and (max-width:530px) {
+  .scheduleCard {
+    width: 175px;
+    height: 110px;
+    top: 31%;
+  }
+  .feb8, .feb10{
+    left: 10.5%;
+  }
+
+  .feb9,.feb11 {
+    left: 43%;
+  }
+
+  .feb8.animate, .feb10.animate{
+    left: 17.5%;
+  }
+
+  .feb9.animate,.feb11.animate {
+    left: 50%;
+  }
+
+  .feb10.animate, .feb11.animate {
+    top: 52.5%;
+  }
+
+  .feb12 {
+    left: 20.5%;
+    top: 74%;
+  }
+
+  .feb12.animate {
+    left: 27.5%;
+    top: 74%;
+  }
+
+  .scheduleHead {
+    font-size: 50px;
+  }
+
+  .schedule-list-item:nth-child(1){
+    margin-left: 8.6vw;
+  }
+  
+  .schedule-list-item:nth-child(2){
+    margin-left: 7.55vw;
+  }
+  
+  .schedule-list-item:nth-child(3){
+    margin-left: 6.5vw;
+  }
+  
+  .schedule-list-item:nth-child(4){
+    margin-left: 5.45vw;
+  }
+  
+  .schedule-list-item:nth-child(5){
+    margin-left: 4.4vw;
+  }
+}
+
+@media screen and (max-width: 490px) {
+  .scheduleCard:hover .schedule-list {
+    left: 1vw;
+  }
+
+  .schedule-list-item:nth-child(1){
+    margin-left: 9vw;
+  }
+  
+  .schedule-list-item:nth-child(2){
+    margin-left: 8vw;
+  }
+  
+  .schedule-list-item:nth-child(3){
+    margin-left: 7vw;
+  }
+  
+  .schedule-list-item:nth-child(4){
+    margin-left: 6vw;
+  }
+  
+  .schedule-list-item:nth-child(5){
+    margin-left: 5vw;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .feb8, .feb10{
+    left: 10%;
+  }
+
+  .feb9,.feb11 {
+    left: 46%;
+  }
+
+  .feb8.animate, .feb10.animate{
+    left: 14%;
+  }
+
+  .feb9.animate,.feb11.animate {
+    left: 50%;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .scheduleHead {
+    font-size: 45px;
+  }
+
+  .feb8, .feb10{
+    left: 2.5%;
+  }
+
+  .feb9,.feb11 {
+    left: 42.5%;
+  }
+  .feb8.animate, .feb10.animate{
+    left: 7.5%;
+  }
+
+  .feb9.animate,.feb11.animate {
+    left: 47.5%;
+  }
+  .schedule-list-item:nth-child(1){
+    margin-left: 9.5vw;
+  }
+  
+  .schedule-list-item:nth-child(2){
+    margin-left: 8.3vw;
+  }
+  
+  .schedule-list-item:nth-child(3){
+    margin-left: 7.1vw;
+  }
+  
+  .schedule-list-item:nth-child(4){
+    margin-left: 5.9vw;
+  }
+  
+  .schedule-list-item:nth-child(5){
+    margin-left: 4.7vw;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .scheduleCard {
+    width: 150px;
+    height: 100px;
+  }
+
+  .feb10.animate, .feb11.animate {
+    top: 51%;
+  }
+
+  .feb12.animate {
+    top: 71%;
+  }
+}
+
+@media screen and (max-width: 330px) {
+  .scheduleHead {
+    font-size: 40px;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  .scheduleHead {
+    font-size: 30px;
+  }
+
+  .scheduleCard:hover .schedule-list {
+    left: 3vw;
+  }
+}
+
+@media screen and (max-width: 290px) {
+  .scheduleHead {
+    font-size: 40px;
+  }
+
+  .schedule-list-item:nth-child(1){
+    margin-left: 9.75vw;
+  }
+  
+  .schedule-list-item:nth-child(2){
+    margin-left: 8.5vw;
+  }
+  
+  .schedule-list-item:nth-child(3){
+    margin-left: 7.25vw;
+  }
+  
+  .schedule-list-item:nth-child(4){
+    margin-left: 6vw;
+  }
+  
+  .schedule-list-item:nth-child(5){
+    margin-left: 4.75vw;
+  }
+}
+
+@media screen and (max-width:220px) {
+  .scheduleHead {
+    font-size: 12px;
+  }
+}
+@media (max-width: 900px){
+    .scheduleHead{
+    font-size: 320%;
+  }
+}
+@media (max-width: 700px){
+  .scheduleHead{
+    font-size: 290%;
+  }
+}
+ 
+@media (max-width: 600px){
+  .scheduleHead{
+    font-size: 220%;
+  }
+ }
+ 
+@media (max-width: 320px){
+  .scheduleHead{
+    font-size: 180%;
+  }
+}

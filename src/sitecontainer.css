@@ -1,0 +1,40 @@
+.noblur {
+    transition: all 0.4s;
+}
+
+.blur {
+    position: absolute;
+    z-index: 1000000000;
+    width: 100vw;
+    top: 0;
+    left: 0;
+    height: 500vh;
+    filter: blur(5px);
+    /* pointer-events: none; */
+    user-select: none;
+}
+
+.copyright {
+    scroll-snap-align: start;
+    background-color: #0d0d0d; 
+}
+
+.heart {
+    animation: heart-beat .35s infinite alternate;
+    display: inline-flex;
+}
+
+@keyframes heart-beat {
+    from {
+        transform: scale(0.9);
+    }
+    to {
+        transform: scale(1.1);
+    }
+}
+
+@media screen and (max-width: 790px) {
+    .copyright p{
+        font-size: 15px;
+    }
+}

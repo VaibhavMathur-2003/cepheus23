@@ -1,0 +1,48 @@
+.qrcode {
+    width: clamp(10%, 300px, 70%);
+    height: clamp(10%, max-content, 70%);
+    /* backdrop-filter: blur(5px); */
+    background-color: #ffffff;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: clamp(2%, 40px, 10%);
+    padding-top: 20px;
+    /* padding-left: 30px; */
+    animation: qrcode-anm 0.3s;
+    animation-delay: -0.05s;
+    overflow: hidden;
+    z-index: 1000;
+
+}
+
+.qrcode h3 {
+    color: #000;
+    margin: 0;
+    margin-bottom: 10px;
+    padding: 0px 10px;
+}
+
+@keyframes qrcode-anm {
+    from {
+        width: 0;
+        height: 0;
+    } to {
+        width : clamp(10%, 300px, 70%);
+        height: clamp(10%, max-content, 70%);
+    }
+}
+
+.qrcode .fa-xmark {
+    color: black;
+    text-align: left;
+    font-size: 20px;
+    width: 100%;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
